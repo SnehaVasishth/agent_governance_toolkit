@@ -1,0 +1,37 @@
+version: "1.0"
+name: "L02 Strict Policy"
+description: "Stricter policy for L02"
+
+rules:
+  - name: "allow_web_search"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "web_search"
+    action: "allow"
+    priority: 100
+    message: "Allow web search only"
+
+  - name: "deny_read_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "read_file"
+    action: "deny"
+    priority: 200
+    message: "Deny read file in strict mode"
+
+  - name: "deny_delete_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "delete_file"
+    action: "deny"
+    priority: 200
+    message: "Block delete file"
+
+defaults:
+  action: "deny"
+  max_tokens: 2048
+  max_tool_calls: 5
+  confidence_threshold: 0.9

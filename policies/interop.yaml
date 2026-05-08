@@ -1,0 +1,46 @@
+version: "1.0"
+name: "L04 Interop Policy"
+description: "Equivalent governance intent across YAML, Rego, and Cedar"
+
+rules:
+  - name: "deny_delete_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "delete_file"
+    action: "deny"
+    priority: 200
+    message: "Block delete operations"
+
+  - name: "deny_run_command"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "run_command"
+    action: "deny"
+    priority: 200
+    message: "Block shell command execution"
+
+  - name: "allow_web_search"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "web_search"
+    action: "allow"
+    priority: 100
+    message: "Allow web search"
+
+  - name: "allow_read_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "read_file"
+    action: "allow"
+    priority: 100
+    message: "Allow read file"
+
+defaults:
+  action: "deny"
+  max_tokens: 4096
+  max_tool_calls: 10
+  confidence_threshold: 0.8

@@ -1,0 +1,24 @@
+scenarios:
+  - name : "base_web_search"
+    context :
+      tool_name : "web_search"
+    expected_action : "allow"
+    expected_allowed : true
+
+  - name : "base_allows_read_file"
+    context:
+      tool_name : "read_file"
+    expected_action : "allow"
+    expected_allowed : true
+
+  - name : "delete_file_denied"
+    context:
+      tool_name : "delete_file"
+    expected_action: "deny"
+    expected_allowed: false
+
+  - name : "unknown_tool_denied_by_default"
+    context:
+      tool_name: "run_command"
+    expected_action: 'deny'
+    expected_allowed: false

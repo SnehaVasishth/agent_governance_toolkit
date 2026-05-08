@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-05-05T12:40:55.267306+00:00",
+  "files": {
+    "agent_os.integrations.base": {
+      "sha256": "d5033b220cd80889e0667c14a92362a65d530422ab1d0f309415eb98edc47272",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agent_os\\integrations\\base.py"
+    },
+    "agent_os.integrations.escalation": {
+      "sha256": "e986a52d323d78417df46ee439e79468690d250b104fb2e3b1580b9c0e421f23",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agent_os\\integrations\\escalation.py"
+    },
+    "agent_os.integrations.tool_aliases": {
+      "sha256": "c43ad14a2bdb0f0ce77a1db33b45ff6927b1464d71170c9589d91f3f377d3b4d",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agent_os\\integrations\\tool_aliases.py"
+    },
+    "agent_os.integrations.compat": {
+      "sha256": "231965f15af9865c27cbcb1738e90eb76e2ba591a2e1511f786d5bfbe532a4a2",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agent_os\\integrations\\compat.py"
+    },
+    "agentmesh.governance.policy": {
+      "sha256": "14f09d4cc0a17bc12cff431151031136f1b40ad0876869c20f385326c2842052",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\policy.py"
+    },
+    "agentmesh.governance.conflict_resolution": {
+      "sha256": "e2f3a802354e989a1d996b62b785ed59d3ff99d7331b888c6ccf0a6fa223fbab",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\conflict_resolution.py"
+    },
+    "agentmesh.governance.audit": {
+      "sha256": "e4446e8c45db9ca6049c190f2216afb53abf79ec2e2730a0554a8936854be190",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\audit.py"
+    },
+    "agentmesh.governance.opa": {
+      "sha256": "69cf909eafece2cf6693658bd0aa6bdb1cadbf3b16d520b9441436d2c5a02a77",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\opa.py"
+    },
+    "agentmesh.governance.compliance": {
+      "sha256": "3807a6b33005ff04b162853ad2350648c58ceee3da8ac007f498b258863328ed",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\compliance.py"
+    },
+    "agentmesh.governance.shadow": {
+      "sha256": "fdc8261fcab46ac25a5cd197bb76f3917c6ef9eb94c62fdd8ffc2ae3d82b76ef",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\governance\\shadow.py"
+    },
+    "agentmesh.identity.agent_id": {
+      "sha256": "dae2791289cf50ba12835bcba753b153e3c8a274bb2e9676a962f2922b53f9d4",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\identity\\agent_id.py"
+    },
+    "agentmesh.identity.revocation": {
+      "sha256": "e19408b6537b4d02dc986113c5290710188bf99a788483331f247200ce8bec48",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\identity\\revocation.py"
+    },
+    "agentmesh.identity.rotation": {
+      "sha256": "eb9f914cb8cf95a01393089923df356f05ffbd4b541fbc874ba8177dbda07097",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\identity\\rotation.py"
+    },
+    "agentmesh.trust.cards": {
+      "sha256": "41604301ffa63f192ab038bc4bd9c89245d0cfdc5507f1906ba3c2321d3f58bb",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\trust\\cards.py"
+    },
+    "agentmesh.storage.file_trust_store": {
+      "sha256": "b224556e0f9840923b91d0d3ff3a7880ecd8abbc905a65383ee0cc53109c6b86",
+      "path": "D:\\ZBrain_Project\\agent_governance_toolkit_poc\\sneha\\Lib\\site-packages\\agentmesh\\storage\\file_trust_store.py"
+    }
+  },
+  "functions": {
+    "agentmesh.governance.policy:PolicyEngine.evaluate": "88dfbc64a0c34af60514f10fddc4f2974d7d014ee069c48febab70b0d9af4dc4",
+    "agentmesh.governance.conflict_resolution:PolicyConflictResolver.resolve": "35b5375a3b12bbda69edd206401ed779ab63c7fe5126c02ef1c7ecb12a39fe8a",
+    "agentmesh.governance.audit:AuditChain.add_entry": "4b415aa36acf4f7ec5759040ee09f003e458ff6e3f03cf380a715624c796f1eb",
+    "agentmesh.trust.cards:CardRegistry.is_verified": "8e1d9ae9f8a891e6dfabbcfeb1886c9cb366de8aee97c808e0bf3dfe5fa4404d"
+  }
+}

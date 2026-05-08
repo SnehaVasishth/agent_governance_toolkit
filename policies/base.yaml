@@ -1,0 +1,37 @@
+version: "1.0"
+name: "L02 Base Policy"
+description: "Baseline policy for L02 policy-as-code lifecycle"
+rules:
+  - name: "allow_web_search"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "web_search"
+    action: "allow"
+    priority: 100
+    message: "Allow web search"
+
+  - name: "allow_read_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "read_file"
+    action: "allow"
+    priority: 100
+    message: "Allow read file"
+
+  - name: "deny_delete_file"
+    condition:
+      field: "tool_name"
+      operator: "eq"
+      value: "delete_file"
+    action: "deny"
+    priority: 200
+    message: "Block delete file"
+
+defaults:
+  action: "deny"
+  max_tokens: 4096
+  max_tool_calls: 10
+  confidence_threshold: 0.8
+
