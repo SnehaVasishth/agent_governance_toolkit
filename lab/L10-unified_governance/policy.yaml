@@ -1,0 +1,21 @@
+apiVersion: governance.toolkit/v1
+name: l10-unified-governance
+agents:
+  - "*"
+rules:
+  - name: allow_web_search
+    description: Allow web search actions
+    stage: pre_tool
+    condition: "action.type == 'web_search'"
+    action: allow
+    priority: 100
+
+  - name: deny_delete_file
+    description: Deny file deletion actions
+    stage: pre_tool
+    condition: "action.type == 'delete_file'"
+    action: deny
+    priority: 200
+
+default_action: deny
+

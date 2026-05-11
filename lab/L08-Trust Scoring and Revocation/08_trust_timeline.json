@@ -1,0 +1,242 @@
+{
+  "lab": "L08 Trust Scoring and Revocation",
+  "generated_at_utc": "",
+  "target_did": "did:mesh:agent-alpha-001",
+  "notes": "Fill each section with exact CLI JSON outputs captured during the sequence.",
+  "commands_sequence": [
+    "agentmesh trust list --json",
+    "agentmesh trust inspect <TARGET_DID> --json",
+    "agentmesh trust history <TARGET_DID> --json",
+    "agentmesh trust attest <TARGET_DID> --note \"L08 attestation test\" --score-boost 40 --json",
+    "agentmesh trust inspect <TARGET_DID> --json",
+    "agentmesh trust history <TARGET_DID> --json",
+    "agentmesh trust revoke <TARGET_DID> --reason \"L08 revocation drill\" --force --json",
+    "agentmesh trust inspect <TARGET_DID> --json",
+    "agentmesh trust history <TARGET_DID> --json",
+    "agentmesh trust report --json"
+  ],
+  "baseline": {
+    "inspect": {
+  "agent_id": "did:mesh:agent-alpha-001",
+  "name": "alpha-agent",
+  "trust_score": 920,
+  "trust_level": "verified_partner",
+  "verified": true,
+  "protocol": "a2a",
+  "capabilities": [
+    "read:data",
+    "write:reports",
+    "execute:tasks"
+  ],
+  "endpoint": "https://alpha.agents.example.com",
+  "connected_at": "2026-05-10 13:59:49",
+  "last_verified": "2026-05-10 15:54:49"
+},
+    "history": {"agent_id": "did:mesh:agent-alpha-001",
+  "history": [
+    {
+      "timestamp": "2026-05-10 10:00:44",
+      "score": 800,
+      "event": "initial",
+      "delta": 0
+    },
+    {
+      "timestamp": "2026-05-10 11:00:44",
+      "score": 820,
+      "event": "handshake",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 12:00:44",
+      "score": 850,
+      "event": "task_complete",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 13:00:44",
+      "score": 870,
+      "event": "policy_check",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 14:00:44",
+      "score": 900,
+      "event": "attestation",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 15:00:44",
+      "score": 920,
+      "event": "audit",
+      "delta": 20
+    }
+  ]},
+    "report": {}
+  },
+  "after_attestation": {
+    "attest_response": {"agent_id": "did:mesh:agent-alpha-001",
+  "name": "alpha-agent",
+  "action": "attested",
+  "note": "L08 attestation test",
+  "previous_score": 920,
+  "score_boost": 40,
+  "new_score": 960,
+  "new_level": "verified_partner",
+  "attested_at": "2026-05-10 16:03:40"},
+    "inspect": {"agent_id": "did:mesh:agent-alpha-001",
+  "name": "alpha-agent",
+  "trust_score": 920,
+  "trust_level": "verified_partner",
+  "verified": true,
+  "protocol": "a2a",
+  "capabilities": [
+    "read:data",
+    "write:reports",
+    "execute:tasks"
+  ],
+  "endpoint": "https://alpha.agents.example.com",
+  "connected_at": "2026-05-10 14:04:15",
+  "last_verified": "2026-05-10 15:59:15"},
+    "history": {"agent_id": "did:mesh:agent-alpha-001",
+  "history": [
+    {
+      "timestamp": "2026-05-10 10:04:55",
+      "score": 800,
+      "event": "initial",
+      "delta": 0
+    },
+    {
+      "timestamp": "2026-05-10 11:04:55",
+      "score": 820,
+      "event": "handshake",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 12:04:55",
+      "score": 850,
+      "event": "task_complete",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 13:04:55",
+      "score": 870,
+      "event": "policy_check",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 14:04:55",
+      "score": 900,
+      "event": "attestation",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 15:04:55",
+      "score": 920,
+      "event": "audit",
+      "delta": 20
+    }
+  ]}
+  },
+  "after_revocation": {
+    "revoke_response": {"agent_id": "did:mesh:agent-alpha-001",
+  "name": "alpha-agent",
+  "action": "revoked",
+  "reason": "L08 revocation drill",
+  "previous_score": 920,
+  "new_score": 0,
+  "revoked_at": "2026-05-10 16:07:32"},
+    "inspect": {"agent_id": "did:mesh:agent-alpha-001",
+  "name": "alpha-agent",
+  "trust_score": 920,
+  "trust_level": "verified_partner",
+  "verified": true,
+  "protocol": "a2a",
+  "capabilities": [
+    "read:data",
+    "write:reports",
+    "execute:tasks"
+  ],
+  "endpoint": "https://alpha.agents.example.com",
+  "connected_at": "2026-05-10 14:07:48",
+  "last_verified": "2026-05-10 16:02:48"},
+    "history": {"agent_id": "did:mesh:agent-alpha-001",
+  "history": [
+    {
+      "timestamp": "2026-05-10 10:08:09",
+      "score": 800,
+      "event": "initial",
+      "delta": 0
+    },
+    {
+      "timestamp": "2026-05-10 11:08:09",
+      "score": 820,
+      "event": "handshake",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 12:08:09",
+      "score": 850,
+      "event": "task_complete",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 13:08:09",
+      "score": 870,
+      "event": "policy_check",
+      "delta": 20
+    },
+    {
+      "timestamp": "2026-05-10 14:08:09",
+      "score": 900,
+      "event": "attestation",
+      "delta": 30
+    },
+    {
+      "timestamp": "2026-05-10 15:08:09",
+      "score": 920,
+      "event": "audit",
+      "delta": 20
+    }
+  ]}
+  },
+  "final_summary": {
+    "report": {{
+    "agent_id": "did:mesh:agent-alpha-001",
+    "trust_score": 920,
+    "trust_level": "verified_partner",
+    "successful_tasks": 5,
+    "failed_tasks": 0,
+    "last_activity": "2026-05-10 15:08:52"
+  },
+  {
+    "agent_id": "did:mesh:agent-beta-002",
+    "trust_score": 750,
+    "trust_level": "trusted",
+    "successful_tasks": 5,
+    "failed_tasks": 0,
+    "last_activity": "2026-05-10 15:08:52"
+  },
+  {
+    "agent_id": "did:mesh:agent-gamma-003",
+    "trust_score": 480,
+    "trust_level": "probationary",
+    "successful_tasks": 0,
+    "failed_tasks": 5,
+    "last_activity": "2026-05-10 15:08:52"
+  },
+  {
+    "agent_id": "did:mesh:agent-delta-004",
+    "trust_score": 250,
+    "trust_level": "untrusted",
+    "successful_tasks": 3,
+    "failed_tasks": 2,
+    "last_activity": "2026-05-10 15:08:52"
+  }},
+    "observations": [
+      "Trust state/score before attestation:",
+      "Trust state/score after attestation:",
+      "Trust state/score after revocation:",
+      "Key governance takeaway:"
+    ]
+  }
+}
